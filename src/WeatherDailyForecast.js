@@ -22,17 +22,21 @@ export default function WeatherDailyForecast(props) {
     return (
       <div className="WeatherDailyForecast">
         <div className="row">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 5) {
-              return (
-                <div className="col" key={index}>
-                  <WeatherForecastDay data={dailyForecast[0]} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+          <div className="col">
+            <WeatherForecastDay data={forecast[0]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[1]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[2]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[3]} />
+          </div>
+          <div className="col">
+            <WeatherForecastDay data={forecast[4]} />
+          </div>
         </div>
       </div>
     );
